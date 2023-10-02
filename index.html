@@ -95,7 +95,7 @@
     <section id="home">
       <div class="w-full mt-20 px-10 md:px-32 flex justify-between gap-6 flex-col md:flex-row">
         <div class="w-full md:w-3/5  order-2 md:order-1">
-          <p class="text-2xl text-slate-400 font-semibold">Grocery Store</p>
+          <span id="element" class="text-2xl text-slate-400 font-semibold"></span>
           <h2 class="text-3xl md:text-7xl my-3 font-bold text-slate-700">Lorem ipsum dolor sit amet.</h2>
           <p class="text-lg w-full md:w-[73%] dark:text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
             est, ex cupiditate saepe voluptatem similique quas ipsum explicabo omnis laudantium.</p>
@@ -157,7 +157,17 @@
         <p class="font-bold">&copy;Fitria Sari Grocery 2023</p>
       </div>
     </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
+      var typed = new Typed('#element', {
+      strings: ['Grocery Store'],
+      typeSpeed: 50,
+      loop:true,
+      startDelay:50,
+      backSpeed:50,
+      smartBackSpace: true,
+      shuffle:false
+    });
       document.addEventListener("DOMContentLoaded", () => {
         const menuToggle = document.getElementById("menuToggle");
         const menu = document.getElementById("menu");
